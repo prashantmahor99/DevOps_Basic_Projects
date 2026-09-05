@@ -1,0 +1,72 @@
+LINUX BASICS - DEVOPS ASSIGNMENT
+================================
+
+Run these commands in Ubuntu/Linux terminal from your home directory.
+
+1. CREATE DIRECTORY
+-------------------
+mkdir -p test_dir
+
+2. CREATE EMPTY FILE
+--------------------
+touch test_dir/Example.txt
+
+3. RENAME FILE
+--------------
+mv test_dir/Example.txt test_dir/renamed_example.txt
+
+4. DISPLAY /etc/passwd
+----------------------
+cat /etc/passwd
+
+5. FIRST 5 LINES
+----------------
+head -n 5 /etc/passwd
+
+6. LAST 5 LINES
+---------------
+tail -n 5 /etc/passwd
+
+7. SEARCH ROOT
+--------------
+grep "root" /etc/passwd
+
+8. ZIP DIRECTORY
+----------------
+zip -r test_dir.zip test_dir
+
+If zip is not installed:
+sudo apt update
+sudo apt install zip unzip -y
+
+9. UNZIP
+--------
+mkdir -p unzipped_dir
+unzip test_dir.zip -d unzipped_dir
+
+10. DOWNLOAD FILE
+-----------------
+wget https://example.com/sample.txt
+
+Note: example.com/sample.txt is an example URL and may not provide a real file.
+For a guaranteed test download, use:
+wget https://raw.githubusercontent.com/github/gitignore/main/Linux.gitignore -O sample.txt
+
+11. CHANGE PERMISSIONS TO READ-ONLY FOR EVERYONE
+-------------------------------------------------
+touch test_dir/secure.txt
+chmod 444 test_dir/secure.txt
+ls -l test_dir/secure.txt
+
+12. ENVIRONMENT VARIABLE
+------------------------
+export MY_VAR="Hello, Linux!"
+echo $MY_VAR
+
+FINAL CHECK
+-----------
+tree .
+ls -l test_dir
+ls -lh test_dir.zip
+ls -l unzipped_dir
+echo $MY_VAR
