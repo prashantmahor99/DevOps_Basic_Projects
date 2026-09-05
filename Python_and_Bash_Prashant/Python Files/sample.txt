@@ -1,0 +1,3 @@
+Hello, this file was created using Python.
+It demonstrates the open() and write() functions.
+This Is My 3Rd Sectionn Of My Python Project Write File With Function "W" And Open File With Using Function "O"
