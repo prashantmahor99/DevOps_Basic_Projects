@@ -1,0 +1,58 @@
+FLASK & MONGODB DEVOPS ASSIGNMENT
+================================
+
+1. Open the project folder
+cd Flask_and_MongoDB_Prashant
+
+2. Create a virtual environment
+python3 -m venv venv
+
+3. Activate the virtual environment
+source venv/bin/activate
+
+4. Install dependencies
+pip install -r requirements.txt
+
+5. Create your environment file
+cp .env.example .env
+
+6. Edit .env and replace the MongoDB Atlas placeholder with your real connection string
+nano .env
+
+7. Run the Flask application
+python3 app.py
+
+8. Test the JSON API route in browser
+http://127.0.0.1:5000/api
+
+Expected JSON:
+{
+  "message": "JSON API route is working",
+  "project": "Flask & MongoDB DevOps Assignment",
+  "status": "success",
+  "technology": ["Flask", "MongoDB Atlas"]
+}
+
+9. Open the frontend form
+http://127.0.0.1:5000/
+
+10. Submit name, email and message.
+On success you will be redirected to /success and see:
+Data submitted successfully
+
+11. Test error handling
+- Stop MongoDB access / use an invalid URI OR leave a field empty.
+- The error is displayed on the same form page without redirecting.
+
+12. Verify MongoDB Atlas
+Open MongoDB Atlas -> Browse Collections -> devops_assignment -> submissions
+Confirm that the submitted document is stored.
+
+13. Git commands
+ git init
+ git add .
+ git commit -m "Flask and MongoDB DevOps assignment"
+ git branch -M main
+ git remote add origin YOUR_GITHUB_REPOSITORY_URL
+ git push -u origin main
+
